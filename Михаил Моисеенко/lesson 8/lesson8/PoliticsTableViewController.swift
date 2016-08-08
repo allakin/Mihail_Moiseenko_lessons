@@ -11,45 +11,48 @@ import UIKit
 class PoliticsTableViewController: UITableViewController {
 	
 	var politicsNames = ["Владимир Путин", "Ангела Мерсель", "Франсуа Аллант", "Синзо Абэ"]
-
+	var politicsImage = ["putin", "merkel", "olland", "abe"]
+	
 	override func viewDidLoad() {
-					super.viewDidLoad()
-
-					// Uncomment the following line to preserve selection between presentations
-					// self.clearsSelectionOnViewWillAppear = false
-
-					// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-					// self.navigationItem.rightBarButtonItem = self.editButtonItem()
+		super.viewDidLoad()
+		
+		// Uncomment the following line to preserve selection between presentations
+		// self.clearsSelectionOnViewWillAppear = false
+		
+		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+		// self.navigationItem.rightBarButtonItem = self.editButtonItem()
 	}
-
+	
 	override func didReceiveMemoryWarning() {
-					super.didReceiveMemoryWarning()
-					// Dispose of any resources that can be recreated.
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
 	}
-
+	
 	// MARK: - Table view data source
 	// возвращает количество секций в таблице
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-					return 1
+		return 1
 	}
-
+	
 	// MARK: - NumberOfRowsInSection
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-					return politicsNames.count
+		return politicsNames.count
 	}
-
+	
 	// MARK: - cellForRowAtIndexPath
+	// вывовидтся информация в ячейках
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cellIndeficator = "Cell"
 		let cell = tableView.dequeueReusableCellWithIdentifier(cellIndeficator, forIndexPath: indexPath) as UITableViewCell
 		cell.textLabel?.text = politicsNames[indexPath.row]
-		cell.imageView?.image = UIImage(named: "putin")
+		cell.imageView?.image = UIImage(named: politicsImage[indexPath.row])
 		return cell
 	}
-
+	
 	override func prefersStatusBarHidden() -> Bool {
 		return true
 	}
+	
 	
 	/*
 	// Override to support conditional editing of the table view.
