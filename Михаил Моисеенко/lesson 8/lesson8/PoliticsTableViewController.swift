@@ -12,7 +12,10 @@ class PoliticsTableViewController: UITableViewController {
 	
 	var politicsNames = ["Владимир Путин", "Ангела Мерсель", "Франсуа Аллант", "Синзо Абэ"]
 	var politicsImage = ["putin", "merkel", "olland", "abe"]
+	var politicsVosrast = ["45", "55", "35", "30"]
+	var politicsDoljnoct = ["Президент", "Канслер", "Премье министр", "Премьер министр"]
 	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -43,9 +46,11 @@ class PoliticsTableViewController: UITableViewController {
 	// вывовидтся информация в ячейках
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cellIndeficator = "Cell"
-		let cell = tableView.dequeueReusableCellWithIdentifier(cellIndeficator, forIndexPath: indexPath) as UITableViewCell
-		cell.textLabel?.text = politicsNames[indexPath.row]
-		cell.imageView?.image = UIImage(named: politicsImage[indexPath.row])
+		let cell = tableView.dequeueReusableCellWithIdentifier(cellIndeficator, forIndexPath: indexPath) as! CustomTableViewCell
+		cell.nameLabel.text = politicsNames[indexPath.row]
+		cell.politicsImage.image = UIImage(named: politicsImage[indexPath.row])
+		cell.vosrast.text = politicsVosrast[indexPath.row]
+		cell.dolzhnoctLabel.text = politicsDoljnoct[indexPath.row]
 		return cell
 	}
 	

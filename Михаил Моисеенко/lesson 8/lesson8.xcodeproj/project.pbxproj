@@ -15,6 +15,9 @@
 		739E315D1D577039001B382A /* lesson8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E315C1D577039001B382A /* lesson8Tests.swift */; };
 		739E31681D577039001B382A /* lesson8UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E31671D577039001B382A /* lesson8UITests.swift */; };
 		739E31761D577201001B382A /* PoliticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E31751D577201001B382A /* PoliticsTableViewController.swift */; };
+		739E31781D584A91001B382A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E31771D584A91001B382A /* CustomTableViewCell.swift */; };
+		739E31791D584A91001B382A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E31771D584A91001B382A /* CustomTableViewCell.swift */; };
+		739E317A1D584A91001B382A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739E31771D584A91001B382A /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		739E31671D577039001B382A /* lesson8UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lesson8UITests.swift; sourceTree = "<group>"; };
 		739E31691D577039001B382A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		739E31751D577201001B382A /* PoliticsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticsTableViewController.swift; sourceTree = "<group>"; };
+		739E31771D584A91001B382A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				739E31531D577038001B382A /* Info.plist */,
 				739E314B1D577038001B382A /* lesson8.xcdatamodeld */,
 				739E31751D577201001B382A /* PoliticsTableViewController.swift */,
+				739E31771D584A91001B382A /* CustomTableViewCell.swift */,
 			);
 			path = lesson8;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			files = (
 				739E314D1D577038001B382A /* lesson8.xcdatamodeld in Sources */,
 				739E31451D577038001B382A /* AppDelegate.swift in Sources */,
+				739E31781D584A91001B382A /* CustomTableViewCell.swift in Sources */,
 				739E31761D577201001B382A /* PoliticsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				739E31791D584A91001B382A /* CustomTableViewCell.swift in Sources */,
 				739E315D1D577039001B382A /* lesson8Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				739E317A1D584A91001B382A /* CustomTableViewCell.swift in Sources */,
 				739E31681D577039001B382A /* lesson8UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +494,7 @@
 				739E316E1D577039001B382A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		739E316F1D577039001B382A /* Build configuration list for PBXNativeTarget "lesson8Tests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +503,7 @@
 				739E31711D577039001B382A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		739E31721D577039001B382A /* Build configuration list for PBXNativeTarget "lesson8UITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +512,7 @@
 				739E31741D577039001B382A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
