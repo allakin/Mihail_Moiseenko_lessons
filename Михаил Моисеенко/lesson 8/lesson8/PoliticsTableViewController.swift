@@ -10,6 +10,7 @@ import UIKit
 
 class PoliticsTableViewController: UITableViewController {
 	
+	// MARK: - Base var classes
 	var politicsNames = ["Владимир Путин", "Ангела Мерсель", "Франсуа Аллант", "Синзо Абэ"]
 	var politicsImage = ["putin", "merkel", "olland", "abe"]
 	var politicsVosrast = ["45", "55", "35", "30"]
@@ -30,6 +31,7 @@ class PoliticsTableViewController: UITableViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+	
 	
 	// MARK: - Table view data source
 	// возвращает количество секций в таблице
@@ -56,6 +58,15 @@ class PoliticsTableViewController: UITableViewController {
 	
 	override func prefersStatusBarHidden() -> Bool {
 		return true
+	}
+	
+	// MARK: - didSelectRowAtIndexPath
+	// обраруживать выбор стоки
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		let optionMenu = UIAlertController(title: nil, message: "Выберете действия", preferredStyle: .ActionSheet)
+		let cancelAction = UIAlertAction(title: "Отмена", style: .Cancel, handler: nil)
+		optionMenu.addAction(cancelAction)
+		presentViewController(optionMenu, animated: true, completion: nil)
 	}
 	
 	
