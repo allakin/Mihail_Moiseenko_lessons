@@ -67,6 +67,21 @@ class PoliticsTableViewController: UITableViewController {
 		let cancelAction = UIAlertAction(title: "Отмена", style: .Cancel, handler: nil)
 		optionMenu.addAction(cancelAction)
 		presentViewController(optionMenu, animated: true, completion: nil)
+		
+		let callActionHandler = {(action: UIAlertAction) -> Void in
+			let alertMesseage = UIAlertController(title: "Сервис временно не доступен", message: "Извините", preferredStyle: .Alert)
+			let okAlert = UIAlertAction(title: "OK", style: .Default, handler: nil)
+			alertMesseage.addAction(okAlert)
+			self.presentViewController(alertMesseage, animated: true, completion: nil)
+		}
+		
+		let callAction = UIAlertAction(title: "Позвонить " + " +7 909463839\(indexPath.row)", style: .Default, handler: callActionHandler)
+		optionMenu.addAction(callAction)
+		let ilkeACtion = UIAlertAction(title: "Поддержать его", style: .Default, handler: {(action: UIAlertAction) -> Void in
+			let cell = tableView.cellForRowAtIndexPath(indexPath)
+			cell?.accessoryType = .Checkmark
+		})
+		optionMenu.addAction(ilkeACtion)
 	}
 	
 	
