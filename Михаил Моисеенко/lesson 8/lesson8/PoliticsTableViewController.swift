@@ -59,6 +59,7 @@ class PoliticsTableViewController: UITableViewController {
 	override func prefersStatusBarHidden() -> Bool {
 		return true
 	}
+
 	
 	// MARK: - didSelectRowAtIndexPath
 	// обраруживать выбор стоки
